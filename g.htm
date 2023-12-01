@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <p>enter num1<input type="text" id="first"></p>
+    <p>enter num2<input type="text" id="second"></p>
+    <button id="calculate">SUM</button>
+    <script>
+        let x = document.getElementById('first');
+        let y = document.getElementById('second');
+        let z = document.getElementById('calculate');
+
+        z.addEventListener('click', add => {
+            let sum = parseInt(x.value) + parseInt(y.value);
+           console.log("the sum is ", sum);
+        }
+       
+            
+        
+        );
+        (function() {
+console.log('This is an IIFE');
+})();
+function createPerson(name, age) {
+return{
+    name : name,
+    age : age
+}
+}
+const john = createPerson('John', 30);
+console.log(john);
+    </script>
+
+
+    
+</body>
+</html>

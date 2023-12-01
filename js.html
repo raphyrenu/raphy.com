@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>drag and drop</title>
+    <link rel="stylesheet" href="js.css">
+    
+</head>
+<body>
+    <p><b>Q1. Which language define the Webpage structure</b></p>
+<div class="list">
+    <ol>
+        <li draggable="true">Java</li>
+        <li draggable="true">HTML</li>
+        <li draggable="true">CSS</li>
+        <li draggable="true">JavaScript</li>
+        <li draggable="true">Python</li>
+    </ol>
+</div>
+<div class="container" >
+        <div id="hi"><input type="text" placeholder="drag and drop here" style="border: none;"></div>
+    </div>
+   <script>
+    let list = document.getElementsByClassName('list');
+    let box = document.getElementById('hi');
+    for(list of list){
+        list.addEventListener('dragstart', function(raphy){
+            let selected = raphy.target;
+
+            box.addEventListener('dragover', function(raphy){
+                raphy.preventDefault();
+            });
+            box.addEventListener('drop', function(raphy){
+                if (selected.innerText === 'HTML') {
+        hi.style.border = '2px dashed green';
+       
+    } else {
+        hi.style.border = '2px dotted red';
+    }
+                
+                box.appendChild(selected);
+                selected = null;
+                dropped = true;
+
+            });
+            
+
+        })
+   
+        }
+   
+
+        
+    
+
+   </script>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p></p>
+   <p><b>Q2. Match following function with thei
+</div>r names</b></p>
+<div class="images">
+    <img src="first.png" alt="" width="20%" height="100px" draggable="true" style="display: inline-block;">
+    <img src="second.png" alt="" draggable="true" width="20%" height="100px" style="display: inline-block;">
+    <img src="third.png" alt="" draggable="true" width="20%" height="100px"  style="display: inline-block;">
+<div class="form">
+<div id="right">Anomynous function</div>
+<div id="center">Immediate invoked function expression</div>
+<div id="left">Arrow function</div>
+</div>
+<script>
+    let images = document.getElementsByClassName('images');
+    let rightbox = document.getElementById('right');
+    let centerbox = document.getElementById('center');
+    let leftbox = document.getElementById('left');
+    for(images of images){
+        images.addEventListener('dragstart', function(e){
+            let selected = e.target;
+
+            rightbox.addEventListener('dragover', function(e){
+                e.preventDefault();
+            });
+            rightbox.addEventListener('drop', function(e){
+                if (selected.src.includes('second.png')) {
+    rightbox.style.border = '2px dashed green';}
+    else {rightbox.style.border = '2px dashed red';}
+    
+  
+               
+                 
+                rightbox.appendChild(selected);
+                selected = null;
+
+            });
+            centerbox.addEventListener('dragover', function(e){
+                e.preventDefault();
+            });
+            centerbox.addEventListener('drop', function(e){
+                if (selected.src.includes('first.png')){
+        centerbox.style.border = '2px dashed green';
+    }
+    else {centerbox.style.border = '2px dashed red';} 
+                centerbox.appendChild(selected);
+                selected = null;
+
+            });
+            leftbox.addEventListener('dragover', function(e){
+                e.preventDefault();
+            });
+            leftbox.addEventListener('drop', function(e){
+                if (selected.src.includes('third.png')){
+        leftbox.style.border = '2px dashed green';
+    }
+    else {leftbox.style.border = '2px dashed red';}
+                leftbox.appendChild(selected);
+                selected = null;
+
+            });
+            
+
+
+        })
+
+        }
+    
+
+   </script>
+   <scr
+
+console.log(length.h);
+   </script>
+
+
+</body>
+</html>
